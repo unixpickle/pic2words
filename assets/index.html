@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pic2Words</title>
+  </head>
+  <body>
+    Is a picture really worth a thousand words? We'll find out.
+    <hr>
+    <form action="/pic2words" method="POST">
+      Picture URL: <input name="url">
+      <br>
+      <input type="Submit" value="Picture to Words">
+    </form>
+    <hr>
+    <form action="/words2pic" method="POST">
+      Words:
+      <br>
+      <textarea name="words" rows="20", cols="80"></textarea>
+      <br>
+      <input type="Submit" value="Words to Picture">
+    </form>
+  </body>
+</html>
