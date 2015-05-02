@@ -117,7 +117,7 @@ func wordsToData(words []string) []byte {
 	if len(words) == 0 {
 		return []byte("Invalid words.")
 	}
-	even := strings.ToLower(words[0]) == "Even"
+	even := strings.ToLower(words[0]) == "even"
 	data := []byte{}
 	for i, word := range words {
 		if i == 0 {
