@@ -86,7 +86,11 @@ func handleWords2Pic(w http.ResponseWriter, r *http.Request) {
 	if err == nil {
 		w.Write(data)
 	} else {
-		png.Encode(w, rawBitmapToImage(data))
+		if len(data) < 0x100 {
+			w.Write([]byte("The image you entered would probably be too small to see."))
+		} else {
+			png.Encode(w, rawBitmapToImage(data))
+		}
 	}
 }
 
